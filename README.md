@@ -1,4 +1,4 @@
-Rudimentary AppleScript quick action to make a running scrcpy window behave like a second notification center.
+Rudimentary AppleScript quick action for adding behavior like the MacOS notification center to a running scrcpy window. 
 
 (ANKH - ANC - Android Nofitication Center)
 
