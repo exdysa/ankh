@@ -48,10 +48,12 @@
 				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
 				<string>Run AppleScript</string>
+				<key>ActionNameComment</key>
+				<string>scrcpy toggle</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "System Events"	tell application "Finder" to set sizeD to the bounds of window of desktop	if exists process "scrcpy" then		set menuHt to 24		set swipe to 0		set swSpeed to 60		set dockPos to position of process "scrcpy"		set dockWidth to ((item 2 of sizeD) * -0.5)		if not visible of process "scrcpy" then			tell process "scrcpy"				set frontmost to true				perform action "AXRaise" of window 1				set dockPos to ¬					{item 3 of sizeD, menuHt}				repeat while swipe is less than (dockWidth)					set swipe to (swipe + (dockWidth / 6))					set position of window 1 to ¬						{(item 3 of sizeD) - swipe, menuHt}				end repeat				set position of window 1 to {(item 3 of sizeD) - ((item 2 of sizeD) * -0.5), menuHt}			end tell			set visible of process "scrcpy" to true					else			tell process "scrcpy"				set frontmost to true				set dockPos to ¬					{((item 3 of sizeD) - dockWidth), menuHt}				repeat while swipe is less than (dockWidth)					set swipe to (swipe + (dockWidth / 6))					set position of window 1 to ¬						{(item 1 of dockPos) + swipe, menuHt}				end repeat				set position of window 1 to {(item 3 of sizeD), menuHt}				set frontmost to false			end tell			if exists process "NoMachine" then tell application "NoMachine" to activate			set visible of process "scrcpy" to false		end if	end ifend tell</string>
+					<string>tell application "System Events"	tell application "Finder" to set sizeDesktop to bounds of window of desktop	if exists first window of process "scrcpy" then		set swipeDistance to size of first window of process "scrcpy"		set menuHt to (24 - (item 4 of sizeDesktop))		set desktopWidth to (item 3 of sizeDesktop)		set swipeProgress to 0		set swipeWidth to ¬			{(item 1 of swipeDistance)}		set swipeSpeed to (swipeWidth / 6)		set swipeBounds to (desktopWidth - swipeWidth)		activate process "scrcpy"		if not visible of process "scrcpy" then			tell process "scrcpy"				set frontmost to true				perform action "AXRaise" of first window				repeat while swipeBounds is less than (desktopWidth - swipeProgress)					set swipeProgress to (swipeProgress + swipeSpeed)					set position of first window to ¬						{(desktopWidth - swipeProgress), menuHt}				end repeat			end tell			set visible of process "scrcpy" to true		else			--hide scrcpy window			tell process "scrcpy"				set frontmost to true				repeat while (swipeBounds + swipeProgress) is less than desktopWidth					set swipeProgress to (swipeProgress + swipeSpeed)					set position of first window to ¬						{(swipeBounds + swipeProgress), menuHt}				end repeat			end tell			set visible of process "scrcpy" to false		end if	end ifend tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +107,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>487.500000:368.000000</string>
+				<string>529.000000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

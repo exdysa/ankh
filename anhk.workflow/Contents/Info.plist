@@ -12,7 +12,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>scrcpy hide</string>
+				<string>ankh</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>
