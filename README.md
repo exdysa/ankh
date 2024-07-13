@@ -4,7 +4,10 @@
 >
 > (ANKH = ANC/Android Nofitication Center)
 
+https://github.com/user-attachments/assets/f1a8a9e2-f462-4654-87de-8fd2b119d901
+
 ## MacOS settings
+
 > * Assign the quick action to a key command for effortless activation. I use a triple-tap in [multitouch](https://multitouch.app/)
 > * Assign to all desktops (``'options'`` in dock context menu)
 > * Could easily be adjusted to accomodate any app as a sidebar, but note MacOS security features interfere with window transition effects outside of screen bounds.
