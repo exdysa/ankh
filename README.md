@@ -1,5 +1,6 @@
 # ankh
-> 使用AppleScript快速操作，将MacOS通知中心等功能添加到正在运行的Scrcpy（https://github.com/Genymobile/scrcpy）。
+> 蘋果煩俱接口快速動作，用於向運行中的scrcpy視窗添加類似MacOS通知中心的行為。
+> （https://github.com/Genymobile/scrcpy）。
 > 
 > AppleScript quick action for adding behavior like the MacOS notification center to a running [scrcpy](https://github.com/Genymobile/scrcpy
 ) window.
@@ -10,19 +11,19 @@ https://github.com/user-attachments/assets/f1a8a9e2-f462-4654-87de-8fd2b119d901
 
 ## MacOS settings
 
-> *将快捷操作分配给键盘命令，以便轻松启动。我在Multitouch（多指触控）中使用三点。
-> *将分配到所有桌面（在“程序棒上下文菜单中的“选项”）。
-> *可以轻松调整，适应任何应用程序作为边栏。
-> *使用--window-borderless显示动画要更平滑，但仍然应该用边框做必须做的事情（显示和隐藏）。 MacOS安全功能干扰了屏幕边界外的窗口过渡效果。
+> 將快速動作指派給一個鍵盤命令，以便輕易啟用。我使用三次敲打在多點觸控中的方式。
+> 將其指派給所有工作台（在儀表板上下文菜單中選擇“選項”）。
+> 可以很容易地調整，以適應任何應用程序作為側欄。
+> 出現動畫效果更加流畅時使用--window-borderless，但它仍然能夠完成所有必要的事情（顯示和隱藏），即使在具有框架的情況下。 MacOS安全性特性干擾了窗口過渡效果超出螢幕範圍之外的影響。
 
 > * Assign the quick action to a key command for effortless activation. I use a triple-tap in [multitouch](https://multitouch.app/)
 > * Assign to all desktops (``'options'`` in dock context menu)
-> * Could easily be adjusted to accomodate any app as a sidebar.
+> * Could easily be adjusted to accommodate any app as a sidebar.
 > * Appear animation is much smoother with --window-borderless, but it should still do what must be done (show and hide) with a border. MacOS security features interfere with window transition effects outside of screen bounds.
 
-## Scrcpy启动设置示例 Example scrcpy Launch settings
+## 例子：scrcpy啟動設定 Example scrcpy Launch settings
 
-> * 景觀 Landscape
+> * 景色 Landscape
 > ```
 > scrcpy -Sw --window-borderless -w --display-orientation=0 --window-y=24 --window-height=432 -m 1280 -K --always-on-top --window-borderless
 > ```
@@ -30,7 +31,7 @@ https://github.com/user-attachments/assets/f1a8a9e2-f462-4654-87de-8fd2b119d901
 > ```
 >  scrcpy -Sw --window-borderless -w --window-y=24 --window-height=1256 -m 1152 -K --lock-video-orientation=0
 >  ```
-> * 圖示 Icon
+> *  圖標 Icon
 > ```
 > scrcpy --forward-all-clicks --window-x=-48 --window-y=24 --window-width=64 --window-height=48 --window-borderless --always-on-top -K
 > ```
