@@ -5,7 +5,7 @@
 > AppleScript quick action for adding behavior like the MacOS notification center to a running [scrcpy](https://github.com/Genymobile/scrcpy
 ) window.
 >
-> (ANKH = ANC/Android無知中心/Android Nofitication Center)
+> (ANKH = ANC/Android通知中心/Android Nofitication Center)
 
 https://github.com/user-attachments/assets/f1a8a9e2-f462-4654-87de-8fd2b119d901
 
