@@ -1,6 +1,6 @@
 # ankh
 > 蘋果煩俱接口快速動作，用於向運行中的scrcpy視窗添加類似MacOS通知中心的行為。
-> （https://github.com/Genymobile/scrcpy）
+> （https://github.com/Genymobile/scrcpy ）
 > 
 > AppleScript quick action for adding behavior like the MacOS notification center to a running [scrcpy](https://github.com/Genymobile/scrcpy
 ) window.
